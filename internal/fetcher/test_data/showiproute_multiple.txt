@@ -1,0 +1,106 @@
+{
+    "0.0.0.0/0": [
+        {
+            "destSelected": true,
+            "distance": 20,
+            "installed": true,
+            "installedNexthopGroupId": 162,
+            "internalFlags": 8,
+            "internalNextHopActiveNum": 8,
+            "internalNextHopNum": 8,
+            "internalStatus": 16,
+            "metric": 0,
+            "nexthopGroupId": 162,
+            "nexthops": [
+                {
+                    "active": true,
+                    "afi": "ipv4",
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 176,
+                    "interfaceName": "Ethernet0",
+                    "ip": "10.1.0.225",
+                    "weight": 1
+                },
+                {
+                    "active": true,
+                    "afi": "ipv4",
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 177,
+                    "interfaceName": "Ethernet8",
+                    "ip": "10.1.0.227",
+                    "weight": 1
+                },
+                {
+                    "active": true,
+                    "afi": "ipv4",
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 184,
+                    "interfaceName": "Ethernet64",
+                    "ip": "10.1.0.229",
+                    "weight": 1
+                },
+                {
+                    "active": true,
+                    "afi": "ipv4",
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 185,
+                    "interfaceName": "Ethernet72",
+                    "ip": "10.1.0.231",
+                    "weight": 1
+                },
+                {
+                    "active": true,
+                    "afi": "ipv4",
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 192,
+                    "interfaceName": "Ethernet128",
+                    "ip": "10.1.0.233",
+                    "weight": 1
+                },
+                {
+                    "active": true,
+                    "afi": "ipv4",
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 193,
+                    "interfaceName": "Ethernet136",
+                    "ip": "10.1.0.235",
+                    "weight": 1
+                },
+                {
+                    "active": true,
+                    "afi": "ipv4",
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 200,
+                    "interfaceName": "Ethernet192",
+                    "ip": "10.1.0.237",
+                    "weight": 1
+                },
+                {
+                    "active": true,
+                    "afi": "ipv4",
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 201,
+                    "interfaceName": "Ethernet200",
+                    "ip": "10.1.0.239",
+                    "weight": 1
+                }
+            ],
+            "prefix": "0.0.0.0/0",
+            "prefixLen": 0,
+            "protocol": "bgp",
+            "selected": true,
+            "table": 254,
+            "uptime": "6d13h38m",
+            "vrfId": 0,
+            "vrfName": "default"
+        }
+    ]
+}

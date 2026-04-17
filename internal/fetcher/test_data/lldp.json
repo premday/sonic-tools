@@ -1,0 +1,1396 @@
+{
+  "lldp": {
+    "interface": [
+      {
+        "eth0": {
+          "via": "LLDP",
+          "rid": "15",
+          "age": "6 days, 16:36:55",
+          "chassis": {
+            "mgmt-sw09.pod00.dc1.mgmt.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:01"
+              },
+              "descr": "SONiC",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "Ethernet0"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:eth0",
+            "ttl": "120",
+            "mfs": "1514",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-T",
+                "hd": false,
+                "fd": true
+              },
+              "current": "unknown"
+            },
+            "power": {
+              "supported": true,
+              "enabled": false,
+              "paircontrol": false,
+              "device-type": "PSE",
+              "pairs": "signal",
+              "class": "class 0",
+              "power-type": "2",
+              "source": "PSE",
+              "priority": "unknown",
+              "requested": "0",
+              "allocated": "0"
+            }
+          },
+          "vlan": {
+            "vlan-id": "508",
+            "pvid": true,
+            "value": "vlan-508"
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              }
+            ],
+            "poe": {
+              "device-type": "PSE",
+              "source": "Primary Power Source",
+              "priority": "low",
+              "power": "0"
+            }
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,90,69",
+              "subtype": "1",
+              "len": "12",
+              "value": "4E,59,33,36,31,39,34,35,30,30,33,39"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet0": {
+          "via": "LLDP",
+          "rid": "8",
+          "age": "55 days, 04:21:17",
+          "chassis": {
+            "super-spine31.pod00.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:02"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.10",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet16"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet0",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet8": {
+          "via": "LLDP",
+          "rid": "1",
+          "age": "55 days, 04:21:26",
+          "chassis": {
+            "super-spine32.pod00.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:03"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.11",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet16"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet8",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet16": {
+          "via": "LLDP",
+          "rid": "17",
+          "age": "55 days, 04:20:58",
+          "chassis": {
+            "leaf01.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:04"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.12",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet216"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet16",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet24": {
+          "via": "LLDP",
+          "rid": "18",
+          "age": "55 days, 04:20:58",
+          "chassis": {
+            "leaf02.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:05"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.13",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet216"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet24",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet32": {
+          "via": "LLDP",
+          "rid": "10",
+          "age": "55 days, 04:21:24",
+          "chassis": {
+            "leaf03.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:06"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.14",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "Ethernet0"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet5/1",
+            "ttl": "120",
+            "mfs": "9114"
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              }
+            ]
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,90,69",
+              "subtype": "1",
+              "len": "12",
+              "value": "57,53,33,31,31,39,30,31,30,30,37,37"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet40": {
+          "via": "LLDP",
+          "rid": "11",
+          "age": "55 days, 04:21:24",
+          "chassis": {
+            "leaf04.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:07"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.15",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "Ethernet0"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet20",
+            "ttl": "120",
+            "mfs": "9114"
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              }
+            ]
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,90,69",
+              "subtype": "1",
+              "len": "12",
+              "value": "57,53,33,31,31,39,31,31,30,34,31,33"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet48": {
+          "via": "LLDP",
+          "rid": "12",
+          "age": "55 days, 04:21:00",
+          "chassis": {
+            "leaf05.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:08"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.16",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet48",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet56": {
+          "via": "LLDP",
+          "rid": "13",
+          "age": "55 days, 04:21:00",
+          "chassis": {
+            "leaf06.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:09"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.17",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet56",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet64": {
+          "via": "LLDP",
+          "rid": "9",
+          "age": "55 days, 04:21:16",
+          "chassis": {
+            "super-spine33.pod00.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:0a"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.18",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet16"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet64",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet72": {
+          "via": "LLDP",
+          "rid": "3",
+          "age": "55 days, 04:21:26",
+          "chassis": {
+            "super-spine34.pod00.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:0b"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.19",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet16"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet72",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet80": {
+          "via": "LLDP",
+          "rid": "26",
+          "age": "55 days, 04:20:57",
+          "chassis": {
+            "leaf07.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:0c"
+              },
+              "descr": "Linux",
+              "mgmt-ip": "192.0.2.20",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet40",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet88": {
+          "via": "LLDP",
+          "rid": "7",
+          "age": "55 days, 04:21:26",
+          "chassis": {
+            "leaf08.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:0d"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.21",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet88",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet96": {
+          "via": "LLDP",
+          "rid": "4",
+          "age": "55 days, 04:21:26",
+          "chassis": {
+            "leaf09.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:0e"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.22",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet96",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet104": {
+          "via": "LLDP",
+          "rid": "29",
+          "age": "52 days, 05:12:10",
+          "chassis": {
+            "leaf10.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:0f"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.23",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet104",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet120": {
+          "via": "LLDP",
+          "rid": "16",
+          "age": "55 days, 04:20:58",
+          "chassis": {
+            "leaf12.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:10"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.24",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet216"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet120",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet128": {
+          "via": "LLDP",
+          "rid": "22",
+          "age": "55 days, 04:20:57",
+          "chassis": {
+            "super-spine35.pod00.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:11"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.25",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet16"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet128",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet136": {
+          "via": "LLDP",
+          "rid": "24",
+          "age": "55 days, 04:20:57",
+          "chassis": {
+            "super-spine36.pod00.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:12"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.26",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet16"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet136",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet144": {
+          "via": "LLDP",
+          "rid": "5",
+          "age": "55 days, 04:21:26",
+          "chassis": {
+            "leaf13.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:13"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.27",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet216"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet144",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet152": {
+          "via": "LLDP",
+          "rid": "27",
+          "age": "55 days, 04:20:52",
+          "chassis": {
+            "leaf14.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:14"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.28",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "Ethernet0"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet20/1",
+            "ttl": "120",
+            "mfs": "9114"
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              }
+            ]
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,90,69",
+              "subtype": "1",
+              "len": "12",
+              "value": "57,53,33,31,31,39,30,32,30,32,36,31"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet160": {
+          "via": "LLDP",
+          "rid": "28",
+          "age": "55 days, 04:20:40",
+          "chassis": {
+            "leaf15.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:15"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.29",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "Ethernet0"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet80",
+            "ttl": "120",
+            "mfs": "9114"
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              }
+            ]
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,90,69",
+              "subtype": "1",
+              "len": "12",
+              "value": "57,53,33,31,31,39,31,31,30,30,34,34"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet168": {
+          "via": "LLDP",
+          "rid": "19",
+          "age": "55 days, 04:20:58",
+          "chassis": {
+            "leaf16.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:16"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.30",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet168",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet176": {
+          "via": "LLDP",
+          "rid": "14",
+          "age": "55 days, 04:21:00",
+          "chassis": {
+            "leaf17.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:17"
+              },
+              "descr": "Linux",
+              "mgmt-ip": "192.0.2.31",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet88",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet184": {
+          "via": "LLDP",
+          "rid": "23",
+          "age": "55 days, 04:20:57",
+          "chassis": {
+            "leaf18.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:18"
+              },
+              "descr": "Linux",
+              "mgmt-ip": "192.0.2.32",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet92",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet192": {
+          "via": "LLDP",
+          "rid": "6",
+          "age": "55 days, 04:21:26",
+          "chassis": {
+            "super-spine37.pod00.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:19"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.33",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet16"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet192",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet200": {
+          "via": "LLDP",
+          "rid": "21",
+          "age": "55 days, 04:20:57",
+          "chassis": {
+            "super-spine38.pod00.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:1a"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.34",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet16"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet200",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet208": {
+          "via": "LLDP",
+          "rid": "20",
+          "age": "55 days, 04:20:57",
+          "chassis": {
+            "leaf19.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:1b"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.35",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet208",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet216": {
+          "via": "LLDP",
+          "rid": "25",
+          "age": "55 days, 04:20:57",
+          "chassis": {
+            "leaf20.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:1c"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.36",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet216",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet224": {
+          "via": "LLDP",
+          "rid": "6844",
+          "age": "0 day, 00:03:36",
+          "chassis": {
+            "leaf21.pod03.dc1.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:01:1d"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.37",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet64"
+            },
+            "descr": "spine03.pod03.dc1.prod.example.net:Ethernet224",
+            "ttl": "120"
+          }
+        }
+      }
+    ]
+  }
+}

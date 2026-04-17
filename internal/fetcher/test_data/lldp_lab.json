@@ -1,0 +1,248 @@
+{
+  "lldp": {
+    "interface": [
+      {
+        "eth0": {
+          "via": "LLDP",
+          "rid": "4",
+          "age": "25 days, 00:20:52",
+          "chassis": {
+            "mgmt-sw02.pod99.dc3.mgmt.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:00:01"
+              },
+              "descr": "SONiC",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "ge-0/0/0"
+            },
+            "descr": "leaf11.pod99.dc3.prod.example.net:eth0",
+            "ttl": "120",
+            "mfs": "1514",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-T",
+                "hd": false,
+                "fd": true
+              },
+              "current": "unknown"
+            }
+          },
+          "vlan": {
+            "vlan-id": "508",
+            "pvid": true,
+            "value": "vlan-508"
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              }
+            ]
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,90,69",
+              "subtype": "1",
+              "len": "12",
+              "value": "4E,58,30,32,32,30,30,38,30,31,34,39"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet0": {
+          "via": "LLDP",
+          "rid": "3",
+          "age": "25 days, 00:20:55",
+          "chassis": {
+            "spine01.pod99.dc3.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:00:02"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.1",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet112"
+            },
+            "descr": "leaf11.pod99.dc3.prod.example.net:Ethernet0",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet32": {
+          "via": "LLDP",
+          "rid": "5",
+          "age": "25 days, 00:20:42",
+          "chassis": {
+            "spine02.pod99.dc3.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:00:03"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": "192.0.2.2",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet112"
+            },
+            "descr": "leaf11.pod99.dc3.prod.example.net:Ethernet32",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet8": {
+          "via": "LLDP",
+          "rid": "1",
+          "age": "25 days, 00:20:56",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:00:04"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:00:05"
+            },
+            "descr": "ConnectX-5, 25G/10G/1G SFP",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet8": {
+          "via": "LLDP",
+          "rid": "2",
+          "age": "25 days, 00:20:55",
+          "chassis": {
+            "server01.example.preprod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:00:06"
+              },
+              "descr": "Linux",
+              "mgmt-ip": [
+                "198.51.100.1",
+                "2001:db8::1"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": false
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:00:05"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "unknown"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

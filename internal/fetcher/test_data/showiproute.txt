@@ -1,0 +1,34 @@
+{
+    "10.0.0.0/31": [
+        {
+            "destSelected": true,
+            "distance": 0,
+            "installed": true,
+            "installedNexthopGroupId": 19560896,
+            "internalFlags": 8,
+            "internalNextHopActiveNum": 1,
+            "internalNextHopNum": 1,
+            "internalStatus": 16,
+            "metric": 0,
+            "nexthopGroupId": 19560896,
+            "nexthops": [
+                {
+                    "active": true,
+                    "directlyConnected": true,
+                    "fib": true,
+                    "flags": 3,
+                    "interfaceIndex": 204,
+                    "interfaceName": "Ethernet224"
+                }
+            ],
+            "prefix": "10.0.0.0/31",
+            "prefixLen": 31,
+            "protocol": "connected",
+            "selected": true,
+            "table": 254,
+            "uptime": "00:00:12",
+            "vrfId": 0,
+            "vrfName": "default"
+        }
+    ]
+}

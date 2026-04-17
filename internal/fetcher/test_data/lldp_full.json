@@ -1,0 +1,2076 @@
+{
+  "lldp": {
+    "interface": [
+      {
+        "eth0": {
+          "via": "LLDP",
+          "rid": "41",
+          "age": "79 days, 23:11:51",
+          "chassis": {
+            "mgmt-sw01.pod01.dc2.mgmt.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:01"
+              },
+              "descr": "SONiC",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "Ethernet0"
+            },
+            "descr": "leaf01.pod01.dc2.prod.example.net:eth0",
+            "ttl": "120",
+            "mfs": "1514",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-T",
+                "hd": false,
+                "fd": true
+              },
+              "current": "unknown"
+            }
+          },
+          "vlan": {
+            "vlan-id": "508",
+            "pvid": true,
+            "value": "vlan-508"
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              }
+            ]
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,90,69",
+              "subtype": "1",
+              "len": "12",
+              "value": "4E,58,30,32,32,31,30,34,30,31,30,32"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet32": {
+          "via": "LLDP",
+          "rid": "40",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "spine02.pod01.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:02"
+              },
+              "descr": "SONiC", "mgmt-ip": "192.0.2.40",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet96"
+            },
+            "descr": "leaf01.pod01.dc2.prod.example.net:Ethernet32",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet64": {
+          "via": "LLDP",
+          "rid": "58",
+          "age": "79 days, 23:11:22",
+          "chassis": {
+            "spine03.pod01.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:03"
+              },
+              "descr": "SONiC", "mgmt-ip": "192.0.2.41",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet96"
+            },
+            "descr": "leaf01.pod01.dc2.prod.example.net:Ethernet64",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet96": {
+          "via": "LLDP",
+          "rid": "57",
+          "age": "79 days, 23:11:23",
+          "chassis": {
+            "spine04.pod01.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:04"
+              },
+              "descr": "SONiC", "mgmt-ip": "192.0.2.42",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "local",
+              "value": "Ethernet96"
+            },
+            "descr": "leaf01.pod01.dc2.prod.example.net:Ethernet96",
+            "ttl": "120"
+          }
+        }
+      },
+      {
+        "Ethernet100": {
+          "via": "LLDP",
+          "rid": "41",
+          "age": "79 days, 23:11:51",
+          "chassis": {
+            "mgmt-sw01.pod01.dc2.mgmt.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:01"
+              },
+              "descr": "SONiC",
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "ifname",
+              "value": "Ethernet0"
+            },
+            "descr": "leaf01.pod01.dc2.prod.example.net:Ethernet100",
+            "ttl": "120",
+            "mfs": "1514"
+          },
+          "vlan": {
+            "vlan-id": "506",
+            "value": "vlan-506"
+          },
+          "lldp-med": {
+            "device-type": "Network Connectivity Device",
+            "capability": [
+              {
+                "type": "Capabilities",
+                "available": true
+              },
+              {
+                "type": "Policy",
+                "available": true
+              },
+              {
+                "type": "Location",
+                "available": true
+              },
+              {
+                "type": "MDI/PSE",
+                "available": true
+              }
+            ]
+          },
+          "unknown-tlvs": {
+            "unknown-tlv": {
+              "oui": "00,90,69",
+              "subtype": "1",
+              "len": "12",
+              "value": "4E,58,30,32,32,31,30,34,30,31,30,32"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet8": {
+          "via": "LLDP",
+          "rid": "2314",
+          "age": "2 days, 00:48:12",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:05"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:05"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet9": {
+          "via": "LLDP",
+          "rid": "1932",
+          "age": "4 days, 03:50:25",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:06"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:06"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet10": {
+          "via": "LLDP",
+          "rid": "1936",
+          "age": "4 days, 02:49:43",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:07"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:07"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet11": {
+          "via": "LLDP",
+          "rid": "1883",
+          "age": "4 days, 21:43:27",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:08"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:08"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet16": {
+          "via": "LLDP",
+          "rid": "2050",
+          "age": "2 days, 18:16:43",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:09"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:09"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet17": {
+          "via": "LLDP",
+          "rid": "2046",
+          "age": "2 days, 18:44:54",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:0a"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:0a"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet18": {
+          "via": "LLDP",
+          "rid": "2313",
+          "age": "2 days, 00:48:41",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:0b"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:0b"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet19": {
+          "via": "LLDP",
+          "rid": "1860",
+          "age": "5 days, 08:17:47",
+          "chassis": {
+            "server0821.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:0c"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.2",
+                "fe80::200:ff:fe00:20c"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:0d"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet24": {
+          "via": "LLDP",
+          "rid": "1768",
+          "age": "6 days, 13:05:16",
+          "chassis": {
+            "server13.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:0e"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.3",
+                "fe80::200:ff:fe00:20e"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:0e"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet25": {
+          "via": "LLDP",
+          "rid": "1933",
+          "age": "4 days, 03:15:22",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:0f"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:0f"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet26": {
+          "via": "LLDP",
+          "rid": "2044",
+          "age": "2 days, 18:46:04",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:10"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:10"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet27": {
+          "via": "LLDP",
+          "rid": "1855",
+          "age": "5 days, 08:18:07",
+          "chassis": {
+            "server1484.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:11"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.4",
+                "fe80::200:ff:fe00:211"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:12"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet40": {
+          "via": "LLDP",
+          "rid": "2045",
+          "age": "2 days, 18:45:34",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:13"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:13"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet41": {
+          "via": "LLDP",
+          "rid": "1885",
+          "age": "4 days, 18:53:43",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:14"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:14"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet42": {
+          "via": "LLDP",
+          "rid": "1884",
+          "age": "4 days, 20:43:55",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:15"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:15"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet43": {
+          "via": "LLDP",
+          "rid": "1779",
+          "age": "6 days, 06:31:35",
+          "chassis": {
+            "server0013.server06.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:16"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.5",
+                "fe80::200:ff:fe00:216"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:16"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet48": {
+          "via": "LLDP",
+          "rid": "2308",
+          "age": "2 days, 00:51:41",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:17"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:17"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet49": {
+          "via": "LLDP",
+          "rid": "1898",
+          "age": "4 days, 15:43:23",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:18"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:18"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet50": {
+          "via": "LLDP",
+          "rid": "1897",
+          "age": "4 days, 15:46:16",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:19"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:19"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet51": {
+          "via": "LLDP",
+          "rid": "1858",
+          "age": "5 days, 08:17:59",
+          "chassis": {
+            "server1036.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:1a"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.6",
+                "fe80::200:ff:fe00:21a"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:1b"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet56": {
+          "via": "LLDP",
+          "rid": "1952",
+          "age": "3 days, 18:47:15",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:1c"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:1c"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet57": {
+          "via": "LLDP",
+          "rid": "1848",
+          "age": "5 days, 08:19:22",
+          "chassis": {
+            "server5774.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:1d"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.7",
+                "fe80::200:ff:fe00:21d"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:1e"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet58": {
+          "via": "LLDP",
+          "rid": "1850",
+          "age": "5 days, 08:19:05",
+          "chassis": {
+            "server1045.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:1f"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.8",
+                "fe80::200:ff:fe00:21f"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:20"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet59": {
+          "via": "LLDP",
+          "rid": "1934",
+          "age": "4 days, 03:11:55",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:21"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:21"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet72": {
+          "via": "LLDP",
+          "rid": "1935",
+          "age": "4 days, 02:50:16",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:22"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:22"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet73": {
+          "via": "LLDP",
+          "rid": "1862",
+          "age": "5 days, 08:16:27",
+          "chassis": {
+            "server0833.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:23"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.9",
+                "fe80::200:ff:fe00:223"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:24"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet74": {
+          "via": "LLDP",
+          "rid": "2043",
+          "age": "2 days, 18:46:41",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:25"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:25"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet75": {
+          "via": "LLDP",
+          "rid": "1852",
+          "age": "5 days, 08:18:54",
+          "chassis": {
+            "server1049.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:26"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.10",
+                "fe80::200:ff:fe00:226"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:27"
+            },
+            "descr": "eth1",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet80": {
+          "via": "LLDP",
+          "rid": "2047",
+          "age": "2 days, 18:44:21",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:28"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:28"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet81": {
+          "via": "LLDP",
+          "rid": "29",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:29"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:29"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet82": {
+          "via": "LLDP",
+          "rid": "1953",
+          "age": "3 days, 18:45:10",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:2a"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:2a"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet83": {
+          "via": "LLDP",
+          "rid": "2107",
+          "age": "2 days, 08:20:32",
+          "chassis": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:2b"
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:2b"
+            },
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet88": {
+          "via": "LLDP",
+          "rid": "2070",
+          "age": "2 days, 10:42:55",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37383638-3530-4753-4838-323756383956"
+            },
+            "descr": "Generic Server Model",
+            "mgmt-ip": "198.51.100.11"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:2c"
+            },
+            "descr": "Embedded ALOM, Port 1",
+            "ttl": "121"
+          }
+        }
+      },
+      {
+        "Ethernet89": {
+          "via": "LLDP",
+          "rid": "888",
+          "age": "38 days, 05:04:41",
+          "chassis": {
+            "server-hpc01.hpc.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:2d"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.12",
+                "fe80::200:ff:fe00:22d"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": false
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:2d"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet90": {
+          "via": "LLDP",
+          "rid": "732",
+          "age": "48 days, 23:27:07",
+          "chassis": {
+            "server-hpc02.hpc.example.prod": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:2e"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.13",
+                "fe80::200:ff:fe00:22e"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": false
+                },
+                {
+                  "type": "Router",
+                  "enabled": false
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": true
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:2e"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet91": {
+          "via": "LLDP",
+          "rid": "1805",
+          "age": "6 days, 03:09:14",
+          "chassis": {
+            "server0130.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:2f"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.14",
+                "fe80::200:ff:fe00:22f"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:2f"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": false,
+              "enabled": false,
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet104": {
+          "via": "LLDP",
+          "rid": "32",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-323530324247"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:30"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet104": {
+          "via": "LLDP",
+          "rid": "1762",
+          "age": "6 days, 13:08:01",
+          "chassis": {
+            "server0177.server07.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:30"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.15",
+                "fe80::200:ff:fe00:230"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:30"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet105": {
+          "via": "LLDP",
+          "rid": "31",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-32353032435A"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:31"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet105": {
+          "via": "LLDP",
+          "rid": "1806",
+          "age": "6 days, 03:09:08",
+          "chassis": {
+            "server0192.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:31"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.16",
+                "fe80::200:ff:fe00:231"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:31"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet106": {
+          "via": "LLDP",
+          "rid": "33",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-323530324437"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:32"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet106": {
+          "via": "LLDP",
+          "rid": "1807",
+          "age": "6 days, 03:07:53",
+          "chassis": {
+            "server0223.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:32"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.17",
+                "fe80::200:ff:fe00:232"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:32"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet107": {
+          "via": "LLDP",
+          "rid": "35",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-323530324244"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:33"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet107": {
+          "via": "LLDP",
+          "rid": "1817",
+          "age": "6 days, 02:32:11",
+          "chassis": {
+            "server0092.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:33"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.18",
+                "fe80::200:ff:fe00:233"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:33"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet112": {
+          "via": "LLDP",
+          "rid": "34",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-323530324350"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:34"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet112": {
+          "via": "LLDP",
+          "rid": "1810",
+          "age": "6 days, 03:07:09",
+          "chassis": {
+            "server0134.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:34"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.19",
+                "fe80::200:ff:fe00:234"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:34"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet113": {
+          "via": "LLDP",
+          "rid": "36",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-323530324443"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:35"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet113": {
+          "via": "LLDP",
+          "rid": "1815",
+          "age": "6 days, 02:50:00",
+          "chassis": {
+            "server0094.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:35"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.20",
+                "fe80::200:ff:fe00:235"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:35"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet114": {
+          "via": "LLDP",
+          "rid": "39",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-32353032425A"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:36"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet114": {
+          "via": "LLDP",
+          "rid": "1812",
+          "age": "6 days, 03:06:44",
+          "chassis": {
+            "server0199.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:36"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.21",
+                "fe80::200:ff:fe00:236"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:36"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet115": {
+          "via": "LLDP",
+          "rid": "37",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-323530324256"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:37"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet115": {
+          "via": "LLDP",
+          "rid": "1813",
+          "age": "6 days, 03:05:54",
+          "chassis": {
+            "server0090.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:37"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.22",
+                "fe80::200:ff:fe00:237"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:37"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      },
+      {
+        "Ethernet120": {
+          "via": "LLDP",
+          "rid": "38",
+          "age": "79 days, 23:11:52",
+          "chassis": {
+            "id": {
+              "type": "local",
+              "value": "37393150-3636-584D-5130-323530324258"
+            },
+            "descr": "Generic Server"
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:38"
+            },
+            "descr": "Undefined Slot, Port 1",
+            "ttl": "100"
+          }
+        }
+      },
+      {
+        "Ethernet120": {
+          "via": "LLDP",
+          "rid": "1819",
+          "age": "6 days, 01:55:41",
+          "chassis": {
+            "server0093.server04.dc2.prod.example.net": {
+              "id": {
+                "type": "mac",
+                "value": "02:00:00:00:02:38"
+              },
+              "descr": "SONiC",
+              "mgmt-ip": [
+                "198.51.100.23",
+                "fe80::200:ff:fe00:238"
+              ],
+              "capability": [
+                {
+                  "type": "Bridge",
+                  "enabled": true
+                },
+                {
+                  "type": "Router",
+                  "enabled": true
+                },
+                {
+                  "type": "Wlan",
+                  "enabled": false
+                },
+                {
+                  "type": "Station",
+                  "enabled": false
+                }
+              ]
+            }
+          },
+          "port": {
+            "id": {
+              "type": "mac",
+              "value": "02:00:00:00:02:38"
+            },
+            "descr": "eth2",
+            "ttl": "120",
+            "auto-negotiation": {
+              "supported": true,
+              "enabled": true,
+              "advertised": {
+                "type": "1000Base-X",
+                "hd": false,
+                "fd": true
+              },
+              "current": "cable"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
