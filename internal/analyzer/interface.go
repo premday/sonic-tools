@@ -13,6 +13,7 @@ import (
 // InterfaceLink holds all per-interface data for the merged Interface section.
 type InterfaceLink struct {
 	Interface   string
+	Alias       string
 	Description string
 	LLDPHost    string
 	LLDPPort    string
@@ -35,10 +36,11 @@ func (i InterfaceInfo) String() string {
 		return buf.String()
 	}
 
-	t := newTable("Interface", "Address", "Description", "LLDP host", "LLDP port")
+	t := newTable("Interface", "Alias", "Address", "Description", "LLDP host", "LLDP port")
 	for _, link := range i.Links {
 		t.addRow(
 			link.Interface,
+			link.Alias,
 			link.Address.String(),
 			link.Description,
 			link.LLDPHost,
@@ -68,6 +70,7 @@ func (a *IPAnalyzer) GetInterfaceInfo(ctx context.Context) InterfaceInfo {
 
 		info.Links = append(info.Links, InterfaceLink{
 			Interface:   intf.Name,
+			Alias:       intfInfo.Alias,
 			Description: intfInfo.Description,
 			LLDPHost:    lldpHost,
 			LLDPPort:    lldpPort,

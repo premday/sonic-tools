@@ -34,7 +34,7 @@ func printIPInfo(ip string, jsonFmt bool) error {
 		return err
 	}
 
-	neighborInfo := ipAnalyzer.GetNeighborInfo()
+	neighborInfo := ipAnalyzer.GetNeighborInfo(ctx)
 	interfaceInfo := ipAnalyzer.GetInterfaceInfo(ctx)
 	routingInfo := ipAnalyzer.GetRoutingInfo(ctx)
 

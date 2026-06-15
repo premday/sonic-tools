@@ -82,6 +82,7 @@ func NewIPAnalyzer(ctx context.Context, rdb *redis.Client, targetIP string) (IPA
 type NeighborInfo struct {
 	ip       netip.Addr
 	Neighbor fetcher.ResolvedNeighbor
+	Alias    string
 	LLDPHost string
 	LLDPPort string
 }
@@ -103,8 +104,8 @@ func (n NeighborInfo) String() string {
 		resolvedFrom = "MAC not found in FDB"
 	}
 
-	t := newTable("MAC", "Interface", "Resolved from", "LLDP host", "LLDP port")
-	t.addRow(n.Neighbor.MAC, n.Neighbor.Iface, resolvedFrom, n.LLDPHost, n.LLDPPort)
+	t := newTable("MAC", "Interface", "Alias", "Resolved from", "LLDP host", "LLDP port")
+	t.addRow(n.Neighbor.MAC, n.Neighbor.Iface, n.Alias, resolvedFrom, n.LLDPHost, n.LLDPPort)
 	buf.WriteString(t.String())
 
 	return buf.String()
@@ -112,7 +113,7 @@ func (n NeighborInfo) String() string {
 
 // GetNeighborInfo returns the resolved neighbor information for the target IP,
 // including the real physical/logical interface when the neighbor is on a VLAN.
-func (a *IPAnalyzer) GetNeighborInfo() NeighborInfo {
+func (a *IPAnalyzer) GetNeighborInfo(ctx context.Context) NeighborInfo {
 	info := NeighborInfo{
 		ip:       a.netIP,
 		Neighbor: a.resolvedNeighbor,
@@ -120,6 +121,12 @@ func (a *IPAnalyzer) GetNeighborInfo() NeighborInfo {
 
 	if a.resolvedNeighbor.Found && a.resolvedNeighbor.Iface != "" {
 		info.LLDPHost, info.LLDPPort = a.lldpNeighbors.ExtractInterfaceNeighbor(a.resolvedNeighbor.Iface)
+
+		intfInfo, err := fetcher.GetInterfaceInformation(ctx, a.rdb, a.resolvedNeighbor.Iface)
+		if err != nil {
+			log.Println("failed to extract interface information")
+		}
+		info.Alias = intfInfo.Alias
 	}
 
 	return info
