@@ -88,6 +88,8 @@ func run() error {
 	rdb := sonic.NewRedis()
 	defer rdb.Close()
 
+	cobra.EnablePrefixMatching = true
+
 	rootCmd := &cobra.Command{
 		Use:           "premshow",
 		Short:         "Custom SONiC show CLI",
