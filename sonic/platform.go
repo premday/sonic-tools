@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -176,7 +177,8 @@ func Measure(value float64) NAFloat {
 
 func (nf *NAFloat) UnmarshalText(text []byte) error {
 	value, err := strconv.ParseFloat(strings.TrimSpace(string(text)), 64)
-	if err != nil {
+	// SONiC writes 'inf' or '-inf' for an optical power a transceiver cannot measure
+	if err != nil || math.IsInf(value, 0) || math.IsNaN(value) {
 		nf.Value = nil
 		return nil //nolint:nilerr // an unreadable measure is null, not a failure
 	}

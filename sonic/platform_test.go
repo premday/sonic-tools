@@ -73,6 +73,42 @@ func TestNABool(t *testing.T) {
 	}
 }
 
+func TestNAFloat(t *testing.T) {
+	tests := map[string]struct {
+		value  string
+		want   string
+		isNull bool
+	}{
+		"measure":     {"3.29", "3.29", false},
+		"padded":      {"  -8.14 ", "-8.14", false},
+		"negative":    {"-40", "-40.00", false},
+		"no light":    {"-inf", "", true},
+		"infinite":    {"inf", "", true},
+		"not a value": {"NaN", "", true},
+		"unknown":     {"N/A", "", true},
+		"no reading":  {"", "", true},
+	}
+
+	for name, test := range tests {
+		value := NAFloat{}
+		if err := value.UnmarshalText([]byte(test.value)); err != nil {
+			t.Fatalf("%s: %s", name, err)
+		}
+
+		if value.String() != test.want {
+			t.Errorf("%s: want: %q, got: %q", name, test.want, value)
+		}
+
+		out, err := json.Marshal(value)
+		if err != nil {
+			t.Fatalf("%s: %s", name, err)
+		}
+		if isNull := string(out) == "null"; isNull != test.isNull {
+			t.Errorf("%s: marshalled as %s, want null: %t", name, out, test.isNull)
+		}
+	}
+}
+
 func TestImageVersion(t *testing.T) {
 	tests := map[string]Version{
 		"msn2700": {Build: "202211-R002.0-abc123def", Debian: "11.8", Kernel: "5.10.0-18-2-amd64", ASIC: "mellanox"},
