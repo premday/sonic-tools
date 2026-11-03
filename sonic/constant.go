@@ -21,6 +21,5 @@ const (
 	SONICDir     = "/etc/sonic/"
 	ConfigDBFile = "/etc/sonic/config_db.json"
 	FRRFile      = "/etc/sonic/frr/frr.conf"
-	SNMPFile     = "/etc/sonic/snmp.yml"
 	VersionFile  = "/etc/sonic/sonic_version.yml"
 )

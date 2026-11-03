@@ -1,0 +1,18 @@
+{
+  "SNMP|CONTACT": {
+    "expireat": 0,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "Contact": "network"
+    }
+  },
+  "SNMP|LOCATION": {
+    "expireat": 0,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "Location": "dc1-01.15"
+    }
+  }
+}

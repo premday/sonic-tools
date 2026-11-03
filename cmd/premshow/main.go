@@ -304,7 +304,7 @@ func run() error {
 			GroupID: deviceGroup.ID,
 			Args:    cobra.NoArgs,
 			RunE: func(_ *cobra.Command, _ []string) error {
-				config, err := sonic.SNMPConfig()
+				config, err := sonic.SNMPConfig(ctx, rdb)
 				if err != nil {
 					return err
 				}

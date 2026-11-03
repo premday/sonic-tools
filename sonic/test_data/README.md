@@ -24,9 +24,9 @@ docker top dhcp_relay -e                > "$d/docker_top_dhcp_relay.txt"
 sudo iptables -S                        > "$d/iptables.txt"
 sudo ip6tables -S                       > "$d/ip6tables.txt"
 decode-syseeprom -s                     > "$d/serial.txt"
-cp /etc/sonic/sonic_version.yml /etc/sonic/snmp.yml "$d/"
+cp /etc/sonic/sonic_version.yml "$d/"
 
-for table in 'DEVICE_METADATA|*' 'PORT|*' 'DEVICE_NEIGHBOR|*'; do
+for table in 'DEVICE_METADATA|*' 'PORT|*' 'DEVICE_NEIGHBOR|*' 'SNMP|*' 'SNMP_COMMUNITY|*'; do
   sonic-db-dump -n CONFIG_DB -k "$table"
 done                                    # one file per table, see the names below
 sonic-db-dump -n APPL_DB     -k 'PORT_TABLE:*'                > "$d/appldb_port_table.json"
@@ -45,8 +45,8 @@ oid=$(sonic-db-cli COUNTERS_DB hget COUNTERS_PORT_NAME_MAP Ethernet0)
 sonic-db-dump -n COUNTERS_DB -k "COUNTERS:$oid"               > "$d/countersdb_counters.json"
 ```
 
-The CONFIG_DB files are named `configdb_device_metadata.json`, `configdb_port.json` and
-`configdb_device_neighbor.json`. `sonic-db-dump` writes `{"<key>": {"type", "value", "ttl",
+The CONFIG_DB files are named `configdb_device_metadata.json`, `configdb_port.json`,
+`configdb_device_neighbor.json`, `configdb_snmp.json` and `configdb_snmp_community.json`. `sonic-db-dump` writes `{"<key>": {"type", "value", "ttl",
 "expireat"}}`, which the tests load into an in-memory Redis, one file per database
 (`dumpDatabases` in `redis_test.go`).
 
@@ -98,7 +98,7 @@ grep -rniE 'crto\.io|<real prefixes>|<real ASNs>|<real serials>' sonic/test_data
 go test ./sonic/ ./internal/view/
 ```
 
-The first command must print nothing. `snmp.yml` and `iptables -S` are the two files that carry
+The first command must print nothing. `configdb_snmp_community.json` and `iptables -S` are the two files that carry
 secrets — a community string and the management prefixes — so redact them on the device if you
 prefer they never transit.
 
