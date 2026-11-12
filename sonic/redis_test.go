@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"os"
 	"path/filepath"
+	"reflect"
 	"strconv"
 	"strings"
 	"testing"
@@ -35,6 +36,8 @@ var dumpDatabases = map[int][]string{
 		"configdb_device_metadata.json",
 		"configdb_port.json",
 		"configdb_device_neighbor.json",
+		"configdb_snmp.json",
+		"configdb_snmp_community.json",
 	},
 	STATEDB: {
 		"statedb_transceiver_info.json",
@@ -444,6 +447,42 @@ func TestResolveLocalInterfaces(t *testing.T) {
 		if neighbor.LocalInterfaceStatus != test.operState {
 			t.Errorf("%s: wrong interface state, want: %q, got: %q", name, test.operState, neighbor.LocalInterfaceStatus)
 		}
+	}
+}
+
+func TestSNMPConfig(t *testing.T) {
+	want := map[string]any{
+		"SNMP": map[string]map[string]string{
+			"CONTACT":  {"Contact": "network"},
+			"LOCATION": {"Location": "dc1-01.15"},
+		},
+		"SNMP_COMMUNITY": map[string]map[string]string{
+			"public": {"TYPE": "RO"},
+		},
+	}
+
+	for _, platform := range platforms {
+		config, err := SNMPConfig(context.Background(), deviceRedis(t, platform))
+		if err != nil {
+			t.Fatalf("%s: %s", platform, err)
+		}
+		if !reflect.DeepEqual(config, want) {
+			t.Errorf("%s: wrong SNMP configuration,\nwant: %v\ngot:  %v", platform, want, config)
+		}
+	}
+}
+
+func TestSNMPConfigNotConfigured(t *testing.T) {
+	server := miniredis.RunT(t)
+	rdb := redis.NewClient(&redis.Options{Addr: server.Addr()})
+	t.Cleanup(func() { rdb.Close() })
+
+	config, err := SNMPConfig(context.Background(), rdb)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(config) != 0 {
+		t.Errorf("a table which is not configured should be left out, got: %v", config)
 	}
 }
 

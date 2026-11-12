@@ -126,18 +126,3 @@ func TestImageVersion(t *testing.T) {
 		}
 	}
 }
-
-func TestSNMPConfig(t *testing.T) {
-	for _, platform := range platforms {
-		config := map[string]any{}
-		if err := yaml.Unmarshal([]byte(fixture(t, platform, "snmp.yml")), &config); err != nil {
-			t.Fatalf("%s: %s", platform, err)
-		}
-
-		for _, key := range []string{"snmp_rocommunity", "snmp_location", "snmp_contact"} {
-			if config[key] == nil || config[key] == "" {
-				t.Errorf("%s: %s is missing in %v", platform, key, config)
-			}
-		}
-	}
-}

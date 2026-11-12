@@ -77,7 +77,7 @@ func Collect(ctx context.Context, rdb *redis.Client) Device {
 	if device.Users, err = HumanUsers(); err != nil {
 		fail("users", err)
 	}
-	if device.SNMP, err = SNMPConfig(); err != nil {
+	if device.SNMP, err = SNMPConfig(ctx, rdb); err != nil {
 		fail("snmp", err)
 	}
 	if device.DHCPRelayProcesses, err = DHCPRelayProcesses(ctx); err != nil {

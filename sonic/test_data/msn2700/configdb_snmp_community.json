@@ -1,0 +1,10 @@
+{
+  "SNMP_COMMUNITY|public": {
+    "expireat": 0,
+    "ttl": -0.001,
+    "type": "hash",
+    "value": {
+      "TYPE": "RO"
+    }
+  }
+}
