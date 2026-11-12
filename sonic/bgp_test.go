@@ -19,28 +19,35 @@ func TestBGPNeighbors(t *testing.T) {
 		address   string
 		accepted  int
 		policy    string
+		// the connection counters and the last reset are reported per session, not per family
+		established int
+		dropped     int
+		lastReset   string
 	}{
 		// FRR omits hostForeign entirely while the session is down (SONiC 202211)
 		"down without address": {
 			platform: "msn2700", peer: "192.0.2.2", state: "Active", remoteAs: 4200000002,
-			policy: "RM-SERVER_192_0_2_2-IN",
+			policy: "RM-SERVER_192_0_2_2-IN", lastReset: "Waiting for NHT",
 		},
 		"established v4": {
 			platform: "msn2700", peer: "203.0.113.1", state: "Established", remoteAs: 4200000003,
 			hasUptime: true, address: "203.0.113.1", accepted: 4732, policy: "RM-CLOS-IN",
+			established: 1, lastReset: "Waiting for peer OPEN",
 		},
 		"established v6": {
 			platform: "msn2700", peer: "2001:db8:0:fe:f15:0:201:101", state: "Established", remoteAs: 4200000003,
 			hasUptime: true, address: "2001:db8:0:fe:f15:0:201:101", accepted: 1427, policy: "RM-CLOS-IN",
+			established: 1, lastReset: "Waiting for peer OPEN",
 		},
 		// FRR reports "Unknown" instead of an address on this release (SONiC 202505)
 		"down with unknown address": {
 			platform: "w6510", peer: "198.51.100.2", state: "Active", remoteAs: 4200000002,
-			policy: "RM-SERVER_198_51_100_2-IN",
+			policy: "RM-SERVER_198_51_100_2-IN", lastReset: "No path to specified Neighbor",
 		},
 		"established on the other platform": {
 			platform: "w6510", peer: "203.0.113.145", state: "Established", remoteAs: 4200000003,
 			hasUptime: true, address: "203.0.113.145", accepted: 4591, policy: "RM-CLOS-IN",
+			established: 2, dropped: 1, lastReset: "Waiting for peer OPEN",
 		},
 	}
 
@@ -67,6 +74,13 @@ func TestBGPNeighbors(t *testing.T) {
 		}
 		if test.address != "" && neighbor.RemoteAddress.String() != test.address {
 			t.Errorf("%s: wrong address, want: %q, got: %q", name, test.address, neighbor.RemoteAddress)
+		}
+		if neighbor.ConnectionsEstablished != test.established || neighbor.ConnectionsDropped != test.dropped {
+			t.Errorf("%s: want %d connections established and %d dropped, got %d and %d", name,
+				test.established, test.dropped, neighbor.ConnectionsEstablished, neighbor.ConnectionsDropped)
+		}
+		if neighbor.LastResetReason != test.lastReset {
+			t.Errorf("%s: wrong last reset, want: %q, got: %q", name, test.lastReset, neighbor.LastResetReason)
 		}
 		if hasUptime := neighbor.Uptime.Seconds() > 0; hasUptime != test.hasUptime {
 			t.Errorf("%s: uptime %s, want any uptime: %t", name, neighbor.Uptime, test.hasUptime)

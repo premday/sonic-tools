@@ -37,6 +37,10 @@ type BGPNeighbor struct {
 	BGPState      string          `json:"bgp_state"`
 	Uptime        Uptime          `json:"uptime"`
 
+	ConnectionsEstablished int    `json:"connections_established"`
+	ConnectionsDropped     int    `json:"connections_dropped"`
+	LastResetReason        string `json:"last_reset_reason"`
+
 	// LocalInterface is the interface an eBGP session is expected to use, even when it is down.
 	// It is empty for iBGP and for multihop sessions.
 	LocalInterface       string `json:"local_interface"`
@@ -56,6 +60,10 @@ type frrNeighbor struct {
 	SAFI          map[string]SAFI `json:"addressFamilyInfo"`
 	BGPState      string          `json:"bgpState"`
 	Uptime        Uptime          `json:"bgpTimerUpEstablishedEpoch"`
+
+	ConnectionsEstablished int    `json:"connectionsEstablished"`
+	ConnectionsDropped     int    `json:"connectionsDropped"`
+	LastResetReason        string `json:"lastResetDueTo"`
 
 	LocalInterface       string `json:"-"`
 	LocalInterfaceAlias  string `json:"-"`
@@ -124,25 +132,19 @@ func (n BGPNeighbor) IsEBGP() bool {
 }
 
 type SAFI struct {
-	ImportPolicy           string `json:"import_policy"`
-	ExportPolicy           string `json:"export_policy"`
-	AcceptedPrefixCounter  int    `json:"accepted_prefix_counter"`
-	SentPrefixCounter      int    `json:"sent_prefix_counter"`
-	PrefixAllowedMax       int    `json:"prefix_allowed_max"`
-	ConnectionsEstablished int    `json:"connections_established"`
-	ConnectionsDropped     int    `json:"connections_dropped"`
-	LastResetReason        string `json:"last_reset_reason"`
+	ImportPolicy          string `json:"import_policy"`
+	ExportPolicy          string `json:"export_policy"`
+	AcceptedPrefixCounter int    `json:"accepted_prefix_counter"`
+	SentPrefixCounter     int    `json:"sent_prefix_counter"`
+	PrefixAllowedMax      int    `json:"prefix_allowed_max"`
 }
 
 type frrSAFI struct {
-	ImportPolicy           string `json:"routeMapForIncomingAdvertisements"`
-	ExportPolicy           string `json:"routeMapForOutgoingAdvertisements"`
-	AcceptedPrefixCounter  int    `json:"acceptedPrefixCounter"`
-	SentPrefixCounter      int    `json:"sentPrefixCounter"`
-	PrefixAllowedMax       int    `json:"prefixAllowedMax"`
-	ConnectionsEstablished int    `json:"connectionsEstablished"`
-	ConnectionsDropped     int    `json:"connectionsDropped"`
-	LastResetReason        string `json:"lastResetDueTo"`
+	ImportPolicy          string `json:"routeMapForIncomingAdvertisements"`
+	ExportPolicy          string `json:"routeMapForOutgoingAdvertisements"`
+	AcceptedPrefixCounter int    `json:"acceptedPrefixCounter"`
+	SentPrefixCounter     int    `json:"sentPrefixCounter"`
+	PrefixAllowedMax      int    `json:"prefixAllowedMax"`
 }
 
 func (s *SAFI) UnmarshalJSON(data []byte) error {
