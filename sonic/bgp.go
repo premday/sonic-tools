@@ -294,9 +294,24 @@ func BGPNeighbors(ctx context.Context) (map[string]BGPNeighbor, error) {
 
 // FindBGPNeighbor returns a single neighbor, with the local interface of an eBGP session.
 func FindBGPNeighbor(ctx context.Context, rdb *redis.Client, remoteAddr string) (BGPNeighbor, error) {
-	peers := map[string]BGPNeighbor{}
-	if err := vtyshJSON(ctx, &peers, fmt.Sprintf("show bgp neighbors %s json", remoteAddr)); err != nil {
+	out, err := vtysh(ctx, fmt.Sprintf("show bgp neighbors %s json", remoteAddr))
+	if err != nil {
 		return BGPNeighbor{}, err
+	}
+
+	var notFound struct {
+		NoSuchNeighbor bool `json:"bgpNoSuchNeighbor"`
+	}
+	if err := json.Unmarshal([]byte(out), &notFound); err != nil {
+		return BGPNeighbor{}, fmt.Errorf("failed to parse output of 'vtysh': %w", err)
+	}
+	if notFound.NoSuchNeighbor {
+		return BGPNeighbor{}, fmt.Errorf("neighbor %s not found", remoteAddr)
+	}
+
+	peers := map[string]BGPNeighbor{}
+	if err := json.Unmarshal([]byte(out), &peers); err != nil {
+		return BGPNeighbor{}, fmt.Errorf("failed to parse output of 'vtysh': %w", err)
 	}
 
 	if _, exists := peers[remoteAddr]; !exists {
