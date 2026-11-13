@@ -153,7 +153,7 @@ func TestOpticOfOneInterface(t *testing.T) {
 
 func TestBGPNeighborDetail(t *testing.T) {
 	neighbor := sonic.BGPNeighbor{
-		RemoteAs: 4200000003, LocalAs: 4200000001, BGPState: "Established",
+		RemoteAs: 4200000003, LocalAs: 4200000001, BGPState: "Established", LastResetReason: "Waiting for NHT",
 		Description:    "PG-L3_SP:sp01.example.net",
 		LocalInterface: "Ethernet0", LocalInterfaceAlias: "etp1", LocalInterfaceStatus: "up",
 		SAFI: map[string]sonic.SAFI{
@@ -165,7 +165,7 @@ func TestBGPNeighborDetail(t *testing.T) {
 	out := BGPNeighbor("203.0.113.1", neighbor)
 	for _, want := range []string{
 		"203.0.113.1", "Established", "4200000003", "Ethernet0", "etp1",
-		"ipv4_unicast", "ipv6_unicast", "RM-CLOS-IN", "4732", "1427", "10000",
+		"ipv4_unicast", "ipv6_unicast", "RM-CLOS-IN", "4732", "1427", "10000", "Waiting for NHT",
 	} {
 		if !strings.Contains(out, want) {
 			t.Errorf("%q is missing:\n%s", want, out)

@@ -258,12 +258,13 @@ func BGPNeighbor(addr string, neighbor sonic.BGPNeighbor) string {
 		"Local address", neighbor.LocalAddress.String(),
 		"State", neighbor.BGPState,
 		"Uptime", neighbor.Uptime.String(),
+		"Last reset", neighbor.LastResetReason,
 		"Interface", neighbor.LocalInterface,
 		"Interface alias", neighbor.LocalInterfaceAlias,
 		"Interface state", neighbor.LocalInterfaceStatus,
 	)
 
-	families := NewTable("Address family", "Import policy", "Export policy", "Received", "Sent", "Maximum", "Last reset")
+	families := NewTable("Address family", "Import policy", "Export policy", "Received", "Sent", "Maximum")
 	for _, family := range slices.Sorted(maps.Keys(neighbor.SAFI)) {
 		safi := neighbor.SAFI[family]
 		families.Row(
@@ -273,7 +274,6 @@ func BGPNeighbor(addr string, neighbor sonic.BGPNeighbor) string {
 			strconv.Itoa(safi.AcceptedPrefixCounter),
 			strconv.Itoa(safi.SentPrefixCounter),
 			strconv.Itoa(safi.PrefixAllowedMax),
-			safi.LastResetReason,
 		)
 	}
 
